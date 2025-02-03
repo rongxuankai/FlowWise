@@ -1,0 +1,87 @@
+[gd_scene load_steps=2 format=3 uid="uid://6gur8kp4ymn7"]
+
+[ext_resource type="Script" path="res://scripts/help_window.gd" id="1_h4k3d"]
+
+[node name="HelpDialog" type="AcceptDialog"]
+title = "入门指南"
+initial_position = 2
+size = Vector2i(800, 600)
+ok_button_text = "关闭"
+script = ExtResource("1_h4k3d")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 792.0
+offset_bottom = 551.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][font_size=24]FlowWise使用指南[/font_size][/center]
+
+[font_size=20][color=#4a9eff]基本概念[/color][/font_size]
+这是一个简单的流程图编程工具，通过拖拽和连接不同的节点来创建程序流程。
+
+[font_size=20][color=#4a9eff]节点类型[/color][/font_size]
+1. [color=#4a9eff]开始节点[/color]
+   • 每个程序必须有且只有一个开始节点
+   • 程序从这里开始执行
+
+2. [color=#4a9eff]输入节点[/color]
+   • 用于接收用户输入
+   • 需要指定变量名
+   • 支持数字和文本输入
+
+3. [color=#4a9eff]输出节点[/color]
+   • 用于显示变量值
+   • 在终端中显示指定变量的内容
+
+4. [color=#4a9eff]赋值节点[/color]
+   • 用于变量赋值
+   • 支持数学表达式
+   • 可以使用已定义的变量
+
+5. [color=#4a9eff]选择节点[/color]
+   • 条件判断节点
+   • 有两个输出：True和False
+   • 根据条件选择执行路径
+
+6. [color=#4a9eff]循环节点[/color]
+   • 用于创建循环
+   • 有循环体和输出两个分支
+   • 当条件为真时执行循环体
+   • 当条件为假时退出循环
+
+7. [color=#4a9eff]字符串节点[/color]
+   • 用于显示文本信息
+   • 可以输入任意文字
+   • 执行时直接显示在终端
+   • 支持中文显示
+
+8. [color=#4a9eff]结束节点[/color]
+   • 标记程序结束
+   • 可以有多个结束节点
+
+[font_size=20][color=#4a9eff]基本操作[/color][/font_size]
+1. [color=#4a9eff]创建节点[/color]
+   • 点击左侧组件栏的按钮
+   • 在工作区域右键点击选择节点类型
+
+2. [color=#4a9eff]连接节点[/color]
+   • 从一个节点的输出槽拖动到另一个节点的输入槽
+   • 注意观察连接点的颜色提示
+
+3. [color=#4a9eff]删除节点或连接[/color]
+   • 选中节点按Delete键删除
+   • 右键点击连接线可以断开连接
+
+4. [color=#4a9eff]运行程序[/color]
+   • 点击顶部菜单栏的
+
+[font_size=20][color=#4a9eff]联系作者[/color][/font_size]
+BiliBili:[url=https://space.bilibili.com/407666460?spm_id_from=333.1007.0.0]{荣瑞的荣}[/url]"

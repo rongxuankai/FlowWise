@@ -1,0 +1,225 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfklfoplta5vr"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_5xm8d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1"]
+bg_color = Color(0.12, 0.15, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.4, 0.6, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2"]
+bg_color = Color(0.15, 0.18, 0.23, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.4, 0.6, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Main" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_5xm8d")
+
+[node name="MenuBar" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuBar"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="RunButton" type="Button" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "运行"
+
+[node name="VSeparator" type="VSeparator" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_2")
+
+[node name="SaveButton" type="Button" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "保存"
+
+[node name="VSeparator2" type="VSeparator" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_2")
+
+[node name="LoadButton" type="Button" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "导入"
+
+[node name="VSeparator3" type="VSeparator" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_2")
+
+[node name="MinimapButton" type="Button" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+toggle_mode = true
+text = "显示小地图"
+
+[node name="VSeparator4" type="VSeparator" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_2")
+
+[node name="HelpButton" type="Button" parent="MenuBar/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "帮助"
+
+[node name="WorkArea" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="ComponentPanel" type="PanelContainer" parent="WorkArea"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="ComponentList" type="VBoxContainer" parent="WorkArea/ComponentPanel"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="InputButton" type="Button" parent="WorkArea/ComponentPanel/ComponentList"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "输入"
+
+[node name="OutputButton" type="Button" parent="WorkArea/ComponentPanel/ComponentList"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "输出"
+
+[node name="AssignButton" type="Button" parent="WorkArea/ComponentPanel/ComponentList"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "赋值"
+
+[node name="ConditionButton" type="Button" parent="WorkArea/ComponentPanel/ComponentList"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "选择"
+
+[node name="LoopButton" type="Button" parent="WorkArea/ComponentPanel/ComponentList"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "循环"
+
+[node name="StringButton" type="Button" parent="WorkArea/ComponentPanel/ComponentList"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "字符串"
+
+[node name="EndButton" type="Button" parent="WorkArea/ComponentPanel/ComponentList"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "结束"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WorkArea"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="GraphEdit" type="GraphEdit" parent="WorkArea/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/grid_major = Color(0.2, 0.3, 0.4, 0.5)
+theme_override_colors/grid_minor = Color(0.15, 0.25, 0.35, 0.3)
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+right_disconnects = true
+minimap_enabled = false
+show_zoom_label = true
+show_minimap_button = false
+
+[node name="TerminalPanel" type="PanelContainer" parent="WorkArea/VBoxContainer"]
+custom_minimum_size = Vector2(0, 260)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WorkArea/VBoxContainer/TerminalPanel"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TitleBar" type="HBoxContainer" parent="WorkArea/VBoxContainer/TerminalPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="WorkArea/VBoxContainer/TerminalPanel/VBoxContainer/TitleBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "  终端"
+
+[node name="ResetButton" type="Button" parent="WorkArea/VBoxContainer/TerminalPanel/VBoxContainer/TitleBar"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "重置"
+
+[node name="CopyButton" type="Button" parent="WorkArea/VBoxContainer/TerminalPanel/VBoxContainer/TitleBar"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+text = "复制"
+
+[node name="HSeparator" type="HSeparator" parent="WorkArea/VBoxContainer/TerminalPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+theme_override_styles/separator = SubResource("StyleBoxFlat_2")
+
+[node name="Terminal" type="TextEdit" parent="WorkArea/VBoxContainer/TerminalPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/current_line_color = Color(0.15, 0.2, 0.3, 1)
+theme_override_colors/background_color = Color(0.08, 0.1, 0.15, 1)
+theme_override_colors/font_readonly_color = Color(0.9, 0.95, 1, 1)
+theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
+theme_override_colors/font_selected_color = Color(0.9, 0.95, 1, 1)
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
